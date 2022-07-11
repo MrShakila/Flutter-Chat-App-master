@@ -21,7 +21,7 @@ class AuthController {
   }
 
   Future<void> logout() async {
-    final GoogleSignInAccount? googleUser = await GoogleSignIn().disconnect();
+     await GoogleSignIn().disconnect();
     FirebaseAuth.instance.signOut();
   }
 }

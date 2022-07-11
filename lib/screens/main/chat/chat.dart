@@ -178,7 +178,7 @@ class AppBarSection extends StatelessWidget {
   Widget build(BuildContext context) {
     return Padding(
       padding: const EdgeInsets.symmetric(horizontal: 20.0),
-      child: Container(child: Consumer2<ChatProvider, AuthProvider>(
+      child: SizedBox(child: Consumer2<ChatProvider, AuthProvider>(
         builder: (context, value, value2, child) {
           return Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,

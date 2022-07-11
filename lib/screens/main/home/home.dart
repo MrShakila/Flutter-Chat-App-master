@@ -124,9 +124,7 @@ class ConverstionCard extends StatelessWidget {
             color: kWhite,
             boxShadow: [
               BoxShadow(
-                  offset: Offset(0, 10),
-                  blurRadius: 20,
-                  color: Colors.black12),
+                  offset: Offset(0, 10), blurRadius: 20, color: Colors.black12),
             ],
           ),
           child: Consumer<AuthProvider>(
@@ -155,8 +153,8 @@ class ConverstionCard extends StatelessWidget {
                         children: [
                           CustomText(
                             text: model.userarray
-                                .firstWhere((element) =>
-                                    element.uid != value.user.uid)
+                                .firstWhere(
+                                    (element) => element.uid != value.user.uid)
                                 .name,
                             fontSize: 18,
                             fontWeight: FontWeight.w600,
@@ -171,8 +169,7 @@ class ConverstionCard extends StatelessWidget {
                     ],
                   ),
                   CustomText(
-                    text:
-                        timeago.format(DateTime.parse(model.lastmessgetime)),
+                    text: timeago.format(DateTime.parse(model.lastmessgetime)),
                     fontSize: 14,
                     fontWeight: FontWeight.w200,
                     color: greyColor,
